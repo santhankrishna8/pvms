@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { inject } from "@vercel/analytics"
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent  {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    inject()
+  }
   showImages: boolean = true;
   images: string[] = [
     'assets/fp1.jpg',
@@ -20,7 +24,7 @@ export class AppComponent  {
   closeImages() {
     this.showImages = false;
   }
-  title = 'Website-v';
+  title = 'pvms';
   
 }
 
