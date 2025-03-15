@@ -1,3 +1,51 @@
 <div class="c">
-    <h2>Committee</h2>
+    <h3>జాతీయ కార్య వర్గము</h3>
+    <div class="container mt-5">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let member of members">
+                    <td class="pos"><b>{{ member.position }}</b></td>
+                    <td class="namem">{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="table">
+            <a><b>Executive Members:</b></a>
+            <tbody>
+                <tr *ngFor="let member of ecMembers">
+                    <td>{{ member.name }}({{ member.location }})</td>
+                </tr>
+            </tbody>
+        </table><hr>
+    <h3>రాష్ట్ర కార్య వర్గము</h3>
+    <div class="container mt-5">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let member of smembers">
+                    <td class="pos"><b>{{ member.position }}</b></td>
+                    <td class="namem">{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table">
+            <a><b>Executive Members:</b></a>
+            <tbody>
+                <tr *ngFor="let member of secMembers">
+                    <td>{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table">
+            <a><b>Advisors:</b></a>
+            <tbody>
+                <tr *ngFor="let member of advisors">
+                    <td>{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </div>
