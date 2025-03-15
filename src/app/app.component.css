@@ -13,21 +13,33 @@
   margin-bottom: 5px;
 }
 .navbar {
-    overflow: hidden;
-    background-color: rgb(243, 230, 60); 
-    border-radius: 20px;
-    margin-bottom:5px;
-  }
-  
-  .navbar a {
-    float: left;
-    font-size: 25px;
-    color: black;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center; /* Center items */
+  align-items: center;
+  background-color: rgb(243, 230, 60);
+  /* border-radius: 20px; */
+  padding: 10px;
+  flex-wrap: wrap; /* Allows wrapping instead of stacking */
+  gap: 9px; /* Space between links */
+}
 
-  }
+/* Navbar Links */
+.navbar a {
+  font-size: 14px;
+  font-weight:700;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
   
   .subnav {
     float: left;
@@ -174,14 +186,17 @@
       .subnav:hover .subnav-content:click .subnav-content{
         display: none;
       }
-       .navbar{
-        display: flex;
-        border-radius: 20px;
-       }
-      .navbar a{
-        font-size: 15px;
-        font-weight: bolder;
-      }
+      .navbar {
+        flex-wrap: nowrap; /* Prevents stacking */
+        overflow-x: hidden;
+        justify-content: center; /* Aligns items to the left */
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .navbar a {
+        flex-shrink: 0; /* Ensures links don't shrink */
+    }
       .subnav .subnavbtn{
         font-size: 15px;
         font-weight: bolder;
