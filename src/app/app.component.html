@@ -3,7 +3,9 @@
 <div class="image-overlay" *ngIf="showImages">
   <div class="image-container">
     <button class="close-btn" (click)="closeImages()">✖</button>
-    <img *ngFor="let img of images" [src]="img" alt="Banner">
+    <div class="images-wrapper">
+      <img *ngFor="let img of images" [src]="img" alt="Banner">
+    </div>
   </div>
 </div>
 <div *ngIf="!showImages">

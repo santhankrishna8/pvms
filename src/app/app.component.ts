@@ -9,24 +9,16 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   showImages: boolean = true;
   images: string[] = [
-    '\assets\fp1.jpg',
-    '\assets\fp2.jpg'
+    'assets/fp1.jpg',
+    'assets/fp2.jpg'
   ];
 
-  ngOnInit() {
-    // Check if the user has already closed the images
-    const hasClosed = localStorage.getItem('imagesClosed');
-    if (hasClosed === 'true') {
-      this.showImages = false; // Hide images
-    }
-  }
-
+  
   closeImages() {
-    this.showImages = false; // Hide images
-    localStorage.setItem('imagesClosed', 'true'); // Remember that the user closed it
+    this.showImages = false;
   }
   title = 'Website-v';
   
