@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     inject()
   }
   showImages: boolean = true;
-  images: string[] = [
+  images:string[] = [
     'assets/fp1.jpg',
     'assets/Screenshot_20250316_185805_M365 Copilot.jpg',
     'assets/fp2.jpg'
