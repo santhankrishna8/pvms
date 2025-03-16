@@ -4,14 +4,18 @@
     overflow-x: hidden;
     
 }
-    
-    
+    .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Prevents any overflow issues */
 }
-.banner img{
+  .banner img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:75%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   margin-bottom: 5px;
 }
 .navbar {
